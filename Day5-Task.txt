@@ -1,0 +1,198 @@
+1.Print odd in an array
+
+                    Anonymous:
+var array=function() {
+    for (var i = 0; i < arr.length; i++) {
+if(arr[i]%2!=0){
+console.log(arr[i])
+}
+}
+}
+                      IIFE
+
+var array=(function(arr) {
+    for (var i = 0; i < arr.length; i++) {
+if(arr[i]%2!=0){
+console.log(arr[i])
+}
+})
+   
+                  Arrow Function
+
+var array=function(arr) =>{
+    for (var i = 0; i < arr.length; i++) {
+if(arr[i]%2!=0){
+console.log(arr[i])
+}
+})
+
+
+2.Convert all the string to title caps in a string array
+                
+                 Anonymous:
+
+var string=function(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+}
+    console.log(string("SREE MUKHI YASHWA"));
+                
+                      IIFE:
+
+var string=(function(str) {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+});
+    console.log(string("SREE MUKHI YASHWA"));
+                
+                  
+                       Arrow Function
+
+
+var string=function(str)=> {
+    str = str.toLowerCase().split(' ');
+    for (var i = 0; i < str.length; i++) {
+        str[i] = str[i].charAt(0).toUpperCase() + str[i].slice(1);
+    }
+    return str.join(' ');
+});
+    console.log(string("SREE MUKHI YASHWA"));
+
+;
+
+
+3.Sum of all numbers in an array
+                     
+              
+                 Anonymous:
+
+var arr=function(array){
+var sum=0;
+for(var  i of array){
+sum +=i;
+return sum;
+};
+console.log(arr([23,45,65]));
+}
+                   IIFE:
+
+var arr=(function(array){
+var sum=0;
+for(var i of  array){
+sum +=i;
+return sum;
+};
+console.log(arr([23,45,65]));
+})
+
+
+4. Return all the prime numbers in an array
+
+  Anonymous:
+
+const array = [1,2,3,4,5,6]; 
+function (num) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+}
+
+console.log(array.filter(isPrime))
+
+                   IIFE
+const array = [1,2,3,4,5,6]; 
+(function (num) {
+  for (let i = 2; i <= Math.sqrt(num); i++) {
+    if (num % i === 0) {
+      return false;
+    }
+  }
+  return num > 1;
+console.log(array.filter(isPrime))
+})
+
+5. Return all the palindrome in an array
+                 
+                  Anonymous:
+
+const Palindromes = function (words) {
+ return words.filter(function (word) {
+    return word.split("").reverse().join("") === word;
+  });
+};
+
+console.log(Palindromes(["hello", "ror"]));
+                    
+                        IIFE
+
+const Palindromes =( function (words) {
+ return words.filter(function (word) {
+    return word.split("").reverse().join("") === word;
+  });
+});
+
+console.log(Palindromes(["hello", "ror"]));
+
+
+
+
+              Arrow Function:
+
+console.log(palin)  
+let arr = ["ror","Hello","madam"];
+let palin = arr.filter(w => {
+  let len = w.length;
+  for (let i = 0; i < len / 2; i++) {
+    if (w[i] == w[len - i - 1]) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+});
+console.log(palin)                
+
+
+
+6. Remove duplicates from an array
+
+              Anonymous:
+
+var arr =["1","ok","3","ok","4"];
+ var  remove=function(arr) {
+        return arr.filter((item, 
+            index) => arr.indexOf(item) === index);
+    }
+      
+    console.log(remove(arr));
+     
+                       IIFE
+                         
+ var arr =["1","ok","3","ok","4"];
+ var  remove=(function(arr) {
+        return arr.filter((item, 
+            index) => arr.indexOf(item) === index);
+    });
+    console.log(remove(arr));
+
+
+             Arrow Function:
+
+var duplicate=["1","ok","3","ok","4"];
+      
+    function remove(arr) {
+        return duplicate.filter((item, 
+            index) => duplicate.indexOf(item) === index);
+    }
+      
+    console.log(remove(arr));
+
